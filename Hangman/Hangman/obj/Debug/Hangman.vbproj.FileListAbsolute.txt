@@ -1,0 +1,14 @@
+E:\Documents\Github\20B\Hangman\Hangman\bin\Debug\Hangman.exe.config
+E:\Documents\Github\20B\Hangman\Hangman\bin\Debug\Hangman.exe
+E:\Documents\Github\20B\Hangman\Hangman\bin\Debug\Hangman.pdb
+E:\Documents\Github\20B\Hangman\Hangman\bin\Debug\Hangman.xml
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.vbprojAssemblyReference.cache
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.Main.resources
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.Resources.resources
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.vbproj.GenerateResource.cache
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.vbproj.CoreCompileInputs.cache
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.exe
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.xml
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.pdb
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.Start.resources
+E:\Documents\Github\20B\Hangman\Hangman\obj\Debug\Hangman.Form1.resources
