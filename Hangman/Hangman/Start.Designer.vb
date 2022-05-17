@@ -25,9 +25,9 @@ Partial Class Start
         Me.StartPanel = New System.Windows.Forms.Panel()
         Me.StartButton = New System.Windows.Forms.Button()
         Me.GamePanel = New System.Windows.Forms.Panel()
+        Me.InputBox = New System.Windows.Forms.TextBox()
         Me.GuessLetters = New System.Windows.Forms.Label()
         Me.Button_Enter = New System.Windows.Forms.Button()
-        Me.InputBox = New System.Windows.Forms.TextBox()
         Me.StartPanel.SuspendLayout()
         Me.GamePanel.SuspendLayout()
         Me.SuspendLayout()
@@ -62,6 +62,13 @@ Partial Class Start
         Me.GamePanel.TabIndex = 1
         Me.GamePanel.Visible = False
         '
+        'InputBox
+        '
+        Me.InputBox.Location = New System.Drawing.Point(47, 157)
+        Me.InputBox.Name = "InputBox"
+        Me.InputBox.Size = New System.Drawing.Size(303, 20)
+        Me.InputBox.TabIndex = 4
+        '
         'GuessLetters
         '
         Me.GuessLetters.AutoSize = True
@@ -79,13 +86,6 @@ Partial Class Start
         Me.Button_Enter.TabIndex = 2
         Me.Button_Enter.Text = "Enter"
         Me.Button_Enter.UseVisualStyleBackColor = True
-        '
-        'InputBox
-        '
-        Me.InputBox.Location = New System.Drawing.Point(47, 157)
-        Me.InputBox.Name = "InputBox"
-        Me.InputBox.Size = New System.Drawing.Size(303, 20)
-        Me.InputBox.TabIndex = 4
         '
         'Start
         '
