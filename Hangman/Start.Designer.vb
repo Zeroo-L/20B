@@ -28,6 +28,7 @@ Partial Class Start
         Me.InputBox = New System.Windows.Forms.TextBox()
         Me.GuessLetters = New System.Windows.Forms.Label()
         Me.Button_Enter = New System.Windows.Forms.Button()
+        Me.GuessedLettersLabel = New System.Windows.Forms.Label()
         Me.StartPanel.SuspendLayout()
         Me.GamePanel.SuspendLayout()
         Me.SuspendLayout()
@@ -52,6 +53,7 @@ Partial Class Start
         '
         'GamePanel
         '
+        Me.GamePanel.Controls.Add(Me.GuessedLettersLabel)
         Me.GamePanel.Controls.Add(Me.InputBox)
         Me.GamePanel.Controls.Add(Me.GuessLetters)
         Me.GamePanel.Controls.Add(Me.Button_Enter)
@@ -87,6 +89,16 @@ Partial Class Start
         Me.Button_Enter.Text = "Enter"
         Me.Button_Enter.UseVisualStyleBackColor = True
         '
+        'GuessedLettersLabel
+        '
+        Me.GuessedLettersLabel.AutoSize = True
+        Me.GuessedLettersLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GuessedLettersLabel.Location = New System.Drawing.Point(324, 326)
+        Me.GuessedLettersLabel.Name = "GuessedLettersLabel"
+        Me.GuessedLettersLabel.Size = New System.Drawing.Size(120, 39)
+        Me.GuessedLettersLabel.TabIndex = 5
+        Me.GuessedLettersLabel.Text = "Label1"
+        '
         'Start
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -109,4 +121,5 @@ Partial Class Start
     Friend WithEvents Button_Enter As Button
     Friend WithEvents GuessLetters As Label
     Friend WithEvents InputBox As TextBox
+    Friend WithEvents GuessedLettersLabel As Label
 End Class
