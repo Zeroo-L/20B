@@ -7,34 +7,23 @@ Public Class Start
     Dim GuessedLetters(25) As String 'Array of the guessed letters
     Dim GuessedIndex As Integer = 0 'Index for the array of guseed latters
     Dim Lives As Integer = 10 'How many lives the player has
-    Dim InputLetter As String
+    Dim Score As Integer = 0 'THe score player has earn
 
     Private Sub Start_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Randomize()
-        Dim ListArray As String() = File.ReadAllLines(".\assets\test.txt")
-        GuessWord = ListArray(Int(ListArray.Length * Rnd()))
-        Console.WriteLine(GuessWord)
-
-        ReDim WordArray(GuessWord.Length() - 1)
-        ReDim ProgressArray(GuessWord.Length() - 1)
-
-        For index = 0 To GuessWord.Length - 1
-            WordArray(index) = GuessWord.Chars(index)
-            ProgressArray(index) = "_"
-        Next
-
-        GuessLetters.Text = Join(ProgressArray, " ")
-
+        Call GenerateRandomWord()
         InputBox.MaxLength() = 1
-
-        GuessedLettersLabel.Text = Join(GuessedLetters, " ")
-
+        LivesLable.Text = Lives
+        ScoreLabel.Text = Score
     End Sub
 
     Private Sub Start_Button_Click(sender As Object, e As EventArgs) Handles StartButton.Click
         StartPanel.Visible = False
         GamePanel.Visible = True
 
+    End Sub
+
+    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
+        Application.Exit()
     End Sub
 
     Private Sub Button_Enter_Click(sender As Object, e As EventArgs) Handles Button_Enter.Click
@@ -71,6 +60,7 @@ Public Class Start
 
         If Correct = False Then
             Lives = Lives - 1
+            LivesLable.Text = Lives
         End If
 
         Console.WriteLine(Lives)
@@ -90,14 +80,37 @@ Public Class Start
             Console.WriteLine(GuessedLetters(i))
         Next
         GuessLetters.Text = Join(ProgressArray, " ")
-        GuessedLettersLabel.Text = Join(GuessedLetters, "")
+        GuessedLettersLabel.Text = Join(GuessedLetters, " ")
 
         If Lives = 0 Then
-            Console.WriteLine("game lost")
+            MsgBox("Game lost", 0, "Message")
         End If
         If Join(ProgressArray, "") = Join(WordArray, "") Then
-            Console.WriteLine("game won")
+            Score = Score + 1
+            Call GenerateRandomWord()
+            ReDim GuessedLetters(25)
+            GuessedLettersLabel.Text = Join(GuessedLetters, " ")
+            ScoreLabel.Text = Score
         End If
+    End Sub
+
+    Private Sub GenerateRandomWord()
+        Randomize()
+        Dim ListArray As String() = File.ReadAllLines(".\assets\test.txt")
+        GuessWord = ListArray(Int(ListArray.Length * Rnd()))
+        Console.WriteLine(GuessWord)
+
+        ReDim WordArray(GuessWord.Length() - 1)
+        ReDim ProgressArray(GuessWord.Length() - 1)
+
+        For index = 0 To GuessWord.Length - 1
+            WordArray(index) = GuessWord.Chars(index)
+            ProgressArray(index) = "_"
+        Next
+
+        GuessLetters.Text = Join(ProgressArray, " ")
+
+        GuessedLettersLabel.Text = Join(GuessedLetters, " ")
     End Sub
 
     Function Swap(ByRef Object1 As String, ByRef Object2 As String)
