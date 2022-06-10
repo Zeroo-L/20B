@@ -41,16 +41,6 @@ Public Class Start
         Call MainGameLoop()
     End Sub
 
-    Function LinearSearch(Target As String, SearchSpace() As String, Length As Integer) As Boolean
-        For index = 0 To Length
-            If Target = SearchSpace(index) Then
-                Return True
-            Else
-                Return False
-            End If
-        Next
-    End Function
-
     Private Sub InputBox_KeyDown(sender As Object, e As KeyEventArgs) Handles InputBox.KeyDown
         If e.KeyCode = Keys.Enter Then
             Console.WriteLine("Enter is pressed")
@@ -62,8 +52,10 @@ Public Class Start
         Dim Correct As Boolean = False 'If the input is correct or not
 
         For index = 0 To 25 'Check if letter is used already
-            If InputBox.Text = GuessedLetters(index) Then
-                MsgBox("| " & InputBox.Text & " | has already been used", 0, "Message")
+            If InputBox.Text = "" Then
+                Exit Sub
+            ElseIf InputBox.Text.ToUpper = GuessedLetters(index) Then
+                MsgBox("| " & InputBox.Text.ToUpper & " | has already been used", 0, "Message")
                 InputBox.Clear()
                 Exit Sub
             End If
@@ -82,14 +74,23 @@ Public Class Start
         End If
 
         Console.WriteLine(Lives)
+        Console.WriteLine(GuessedLetters.Length())
 
         GuessedLetters(GuessedIndex) = InputBox.Text.ToUpper
         GuessedIndex = GuessedIndex + 1
         InputBox.Clear()
 
+        For i = 0 To GuessedIndex
+            If String.Compare(GuessedLetters(i), GuessedLetters(i + 1)) > 0 Then
+                Swap(GuessedLetters(i), GuessedLetters(i + 1))
+            End If
+        Next
 
+        For i = 0 To GuessedIndex
+            Console.WriteLine(GuessedLetters(i))
+        Next
         GuessLetters.Text = Join(ProgressArray, " ")
-        GuessedLettersLabel.Text = Join(GuessedLetters, " ")
+        GuessedLettersLabel.Text = Join(GuessedLetters, "")
 
         If Lives = 0 Then
             Console.WriteLine("game lost")
@@ -98,4 +99,11 @@ Public Class Start
             Console.WriteLine("game won")
         End If
     End Sub
+
+    Function Swap(ByRef Object1 As String, ByRef Object2 As String)
+        Dim TEMP As String
+        TEMP = Object1
+        Object1 = Object2
+        Object2 = TEMP
+    End Function
 End Class
