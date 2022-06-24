@@ -54,3 +54,15 @@ C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.vbproj.CoreCompileInputs.
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.exe
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.xml
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.pdb
+C:\Users\Legolas\Downloads\20b\Hangman\bin\Debug\Hangman.exe.config
+C:\Users\Legolas\Downloads\20b\Hangman\bin\Debug\Hangman.exe
+C:\Users\Legolas\Downloads\20b\Hangman\bin\Debug\Hangman.pdb
+C:\Users\Legolas\Downloads\20b\Hangman\bin\Debug\Hangman.xml
+C:\Users\Legolas\Downloads\20b\Hangman\obj\Debug\Hangman.vbprojAssemblyReference.cache
+C:\Users\Legolas\Downloads\20b\Hangman\obj\Debug\Hangman.Resources.resources
+C:\Users\Legolas\Downloads\20b\Hangman\obj\Debug\Hangman.Form1.resources
+C:\Users\Legolas\Downloads\20b\Hangman\obj\Debug\Hangman.vbproj.GenerateResource.cache
+C:\Users\Legolas\Downloads\20b\Hangman\obj\Debug\Hangman.vbproj.CoreCompileInputs.cache
+C:\Users\Legolas\Downloads\20b\Hangman\obj\Debug\Hangman.exe
+C:\Users\Legolas\Downloads\20b\Hangman\obj\Debug\Hangman.xml
+C:\Users\Legolas\Downloads\20b\Hangman\obj\Debug\Hangman.pdb
