@@ -24,8 +24,10 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.StartPanel = New System.Windows.Forms.Panel()
-        Me.ExitPB = New System.Windows.Forms.PictureBox()
-        Me.StartButton = New System.Windows.Forms.Button()
+        Me.SubjectPanel = New System.Windows.Forms.Panel()
+        Me.ChemistryLabel = New System.Windows.Forms.Label()
+        Me.PhysicsLabel = New System.Windows.Forms.Label()
+        Me.SoftwareLabel = New System.Windows.Forms.Label()
         Me.GamePanel = New System.Windows.Forms.Panel()
         Me.HangManPB = New System.Windows.Forms.PictureBox()
         Me.ScoreLabel = New System.Windows.Forms.Label()
@@ -33,10 +35,13 @@ Partial Class Form1
         Me.InputBox = New System.Windows.Forms.TextBox()
         Me.GuessLetters = New System.Windows.Forms.Label()
         Me.Button_Enter = New System.Windows.Forms.Button()
+        Me.ExitPB = New System.Windows.Forms.PictureBox()
+        Me.StartButton = New System.Windows.Forms.Button()
         Me.StartPanel.SuspendLayout()
-        CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SubjectPanel.SuspendLayout()
         Me.GamePanel.SuspendLayout()
         CType(Me.HangManPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StartPanel
@@ -44,30 +49,61 @@ Partial Class Form1
         Me.StartPanel.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.StartPanel.Controls.Add(Me.ExitPB)
         Me.StartPanel.Controls.Add(Me.StartButton)
-        Me.StartPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.StartPanel.Location = New System.Drawing.Point(0, 0)
         Me.StartPanel.Name = "StartPanel"
         Me.StartPanel.Size = New System.Drawing.Size(800, 450)
         Me.StartPanel.TabIndex = 0
         '
-        'ExitPB
+        'SubjectPanel
         '
-        Me.ExitPB.Image = CType(resources.GetObject("ExitPB.Image"), System.Drawing.Image)
-        Me.ExitPB.Location = New System.Drawing.Point(12, 393)
-        Me.ExitPB.Name = "ExitPB"
-        Me.ExitPB.Size = New System.Drawing.Size(56, 54)
-        Me.ExitPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ExitPB.TabIndex = 4
-        Me.ExitPB.TabStop = False
+        Me.SubjectPanel.BackColor = System.Drawing.Color.PaleGreen
+        Me.SubjectPanel.Controls.Add(Me.ChemistryLabel)
+        Me.SubjectPanel.Controls.Add(Me.PhysicsLabel)
+        Me.SubjectPanel.Controls.Add(Me.SoftwareLabel)
+        Me.SubjectPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SubjectPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SubjectPanel.Name = "SubjectPanel"
+        Me.SubjectPanel.Size = New System.Drawing.Size(800, 450)
+        Me.SubjectPanel.TabIndex = 5
         '
-        'StartButton
+        'ChemistryLabel
         '
-        Me.StartButton.Location = New System.Drawing.Point(329, 211)
-        Me.StartButton.Name = "StartButton"
-        Me.StartButton.Size = New System.Drawing.Size(142, 73)
-        Me.StartButton.TabIndex = 0
-        Me.StartButton.Text = "Play"
-        Me.StartButton.UseVisualStyleBackColor = True
+        Me.ChemistryLabel.AutoSize = True
+        Me.ChemistryLabel.BackColor = System.Drawing.Color.PaleGreen
+        Me.ChemistryLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ChemistryLabel.Location = New System.Drawing.Point(572, 211)
+        Me.ChemistryLabel.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.ChemistryLabel.Name = "ChemistryLabel"
+        Me.ChemistryLabel.Size = New System.Drawing.Size(137, 31)
+        Me.ChemistryLabel.TabIndex = 2
+        Me.ChemistryLabel.Text = "Chemistry"
+        Me.ChemistryLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'PhysicsLabel
+        '
+        Me.PhysicsLabel.AutoSize = True
+        Me.PhysicsLabel.BackColor = System.Drawing.Color.PaleGreen
+        Me.PhysicsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PhysicsLabel.Location = New System.Drawing.Point(340, 211)
+        Me.PhysicsLabel.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.PhysicsLabel.Name = "PhysicsLabel"
+        Me.PhysicsLabel.Size = New System.Drawing.Size(109, 31)
+        Me.PhysicsLabel.TabIndex = 1
+        Me.PhysicsLabel.Text = "Physics"
+        Me.PhysicsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'SoftwareLabel
+        '
+        Me.SoftwareLabel.AutoSize = True
+        Me.SoftwareLabel.BackColor = System.Drawing.Color.PaleGreen
+        Me.SoftwareLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SoftwareLabel.Location = New System.Drawing.Point(57, 177)
+        Me.SoftwareLabel.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.SoftwareLabel.Name = "SoftwareLabel"
+        Me.SoftwareLabel.Size = New System.Drawing.Size(174, 93)
+        Me.SoftwareLabel.TabIndex = 0
+        Me.SoftwareLabel.Text = "Software Design And Development"
+        Me.SoftwareLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GamePanel
         '
@@ -87,7 +123,7 @@ Partial Class Form1
         '
         'HangManPB
         '
-        Me.HangManPB.Location = New System.Drawing.Point(450, 3)
+        Me.HangManPB.Location = New System.Drawing.Point(452, 5)
         Me.HangManPB.Name = "HangManPB"
         Me.HangManPB.Size = New System.Drawing.Size(345, 445)
         Me.HangManPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -98,7 +134,7 @@ Partial Class Form1
         '
         Me.ScoreLabel.AutoSize = True
         Me.ScoreLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreLabel.Location = New System.Drawing.Point(11, 11)
+        Me.ScoreLabel.Location = New System.Drawing.Point(11, 17)
         Me.ScoreLabel.Name = "ScoreLabel"
         Me.ScoreLabel.Size = New System.Drawing.Size(85, 31)
         Me.ScoreLabel.TabIndex = 7
@@ -139,20 +175,42 @@ Partial Class Form1
         Me.Button_Enter.Text = "Enter"
         Me.Button_Enter.UseVisualStyleBackColor = True
         '
+        'ExitPB
+        '
+        Me.ExitPB.Image = CType(resources.GetObject("ExitPB.Image"), System.Drawing.Image)
+        Me.ExitPB.Location = New System.Drawing.Point(12, 393)
+        Me.ExitPB.Name = "ExitPB"
+        Me.ExitPB.Size = New System.Drawing.Size(56, 54)
+        Me.ExitPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ExitPB.TabIndex = 4
+        Me.ExitPB.TabStop = False
+        '
+        'StartButton
+        '
+        Me.StartButton.Location = New System.Drawing.Point(329, 211)
+        Me.StartButton.Name = "StartButton"
+        Me.StartButton.Size = New System.Drawing.Size(142, 73)
+        Me.StartButton.TabIndex = 0
+        Me.StartButton.Text = "Play"
+        Me.StartButton.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.StartPanel)
         Me.Controls.Add(Me.GamePanel)
+        Me.Controls.Add(Me.StartPanel)
+        Me.Controls.Add(Me.SubjectPanel)
         Me.Name = "Form1"
         Me.Text = "Start"
         Me.StartPanel.ResumeLayout(False)
-        CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SubjectPanel.ResumeLayout(False)
+        Me.SubjectPanel.PerformLayout()
         Me.GamePanel.ResumeLayout(False)
         Me.GamePanel.PerformLayout()
         CType(Me.HangManPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -167,4 +225,8 @@ Partial Class Form1
     Friend WithEvents ScoreLabel As Label
     Friend WithEvents HangManPB As PictureBox
     Friend WithEvents ExitPB As PictureBox
+    Friend WithEvents SubjectPanel As Panel
+    Friend WithEvents ChemistryLabel As Label
+    Friend WithEvents PhysicsLabel As Label
+    Friend WithEvents SoftwareLabel As Label
 End Class

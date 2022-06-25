@@ -8,22 +8,46 @@ Public Class Form1
     Dim GuessedIndex As Integer = 0 'Index for the array of guseed latters
     Dim Lives As Integer = 10 'How many lives the player has
     Dim Score As Integer = 0 'THe score player has earn
+    Dim Subject As String
 
-    Private Sub Start_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Call GenerateRandomWord(".\assets\test.txt")
-        InputBox.MaxLength() = 1
-        ScoreLabel.Text = Score
-
-        HangManImage()
-    End Sub
-
+    'Starting Screen
     Private Sub Start_Button_Click(sender As Object, e As EventArgs) Handles StartButton.Click
         StartPanel.Visible = False
-        GamePanel.Visible = True
+        SubjectPanel.Visible = True
     End Sub
 
     Private Sub ExitPB_Click(sender As Object, e As EventArgs) Handles ExitPB.Click
         Application.Exit()
+    End Sub
+
+    'Subject Screen
+    Private Sub SoftwareLabel_Click(sender As Object, e As EventArgs) Handles SoftwareLabel.Click
+        Subject = "Software"
+        Call GenerateRandomWord(".\assets\Software.txt")
+        SubjectPanel.Visible = False
+        GamePanel.Visible = True
+    End Sub
+
+    Private Sub PhysicsLabel_Click(sender As Object, e As EventArgs) Handles PhysicsLabel.Click
+        Subject = "Physics"
+        Call GenerateRandomWord(".\assets\Physics.txt")
+        SubjectPanel.Visible = False
+        GamePanel.Visible = True
+    End Sub
+
+    Private Sub ChemistryLabel_Click(sender As Object, e As EventArgs) Handles ChemistryLabel.Click
+        Subject = "Chemistry"
+        Call GenerateRandomWord(".\assets\Chemistry.txt")
+        SubjectPanel.Visible = False
+        GamePanel.Visible = True
+    End Sub
+
+    Private Sub Start_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        InputBox.MaxLength() = 1
+        ScoreLabel.Text = 0
+
+        HangManImage()
     End Sub
 
     Private Sub Button_Enter_Click(sender As Object, e As EventArgs) Handles Button_Enter.Click
@@ -99,16 +123,27 @@ Public Class Form1
         End If
         If Join(ProgressArray, "") = Join(WordArray, "") Then
             Score = Score + 1
-            Call GenerateRandomWord(".\assets\test.txt")
+            Select Case Subject
+                Case "Software"
+                    Call GenerateRandomWord(".\assets\Software.txt")
+                Case "Physics"
+                    Call GenerateRandomWord(".\assets\physics.txt")
+                Case "Chemistry"
+                    Call GenerateRandomWord(".\assets\Chemistry.txt")
+            End Select
+
             ReDim GuessedLetters(25)
             GuessedLettersLabel.Text = Join(GuessedLetters, " ")
             ScoreLabel.Text = Score
         End If
     End Sub
 
-    Private Sub GenerateRandomWord(ByVal location As String)
+    Function GenerateRandomWord(ByVal location As String)
         Randomize()
         Dim ListArray As String() = File.ReadAllLines(location)
+        For i = 0 To ListArray.Length - 1
+            Console.WriteLine(ListArray(i))
+        Next
         GuessWord = ListArray(Int(ListArray.Length * Rnd()))
         Console.WriteLine(GuessWord)
 
@@ -118,12 +153,15 @@ Public Class Form1
         For index = 0 To GuessWord.Length - 1
             WordArray(index) = GuessWord.Chars(index)
             ProgressArray(index) = "_"
+            If WordArray(index) = " " Then
+                ProgressArray(index) = WordArray(index)
+            End If
         Next
 
         GuessLetters.Text = Join(ProgressArray, " ")
 
         GuessedLettersLabel.Text = Join(GuessedLetters, " ")
-    End Sub
+    End Function
 
     Function Swap(ByRef Object1 As String, ByRef Object2 As String)
         Dim TEMP As String
