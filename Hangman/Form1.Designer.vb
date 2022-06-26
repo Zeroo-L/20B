@@ -24,7 +24,9 @@ Partial Class Form1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.StartPanel = New System.Windows.Forms.Panel()
+        Me.SettingPB = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ExitPB = New System.Windows.Forms.PictureBox()
         Me.StartButton = New System.Windows.Forms.Button()
         Me.SubjectPanel = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -32,14 +34,13 @@ Partial Class Form1
         Me.PhysicsLabel = New System.Windows.Forms.Label()
         Me.SoftwareLabel = New System.Windows.Forms.Label()
         Me.GamePanel = New System.Windows.Forms.Panel()
+        Me.HangManPB = New System.Windows.Forms.PictureBox()
         Me.ScoreLabel = New System.Windows.Forms.Label()
         Me.GuessedLettersLabel = New System.Windows.Forms.Label()
         Me.InputBox = New System.Windows.Forms.TextBox()
         Me.GuessLettersLabel = New System.Windows.Forms.Label()
         Me.Button_Enter = New System.Windows.Forms.Button()
         Me.SettingsPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.HangManPB = New System.Windows.Forms.PictureBox()
         Me.SettingsBackPB = New System.Windows.Forms.PictureBox()
         Me.RedPB = New System.Windows.Forms.PictureBox()
         Me.OrangePb = New System.Windows.Forms.PictureBox()
@@ -47,13 +48,16 @@ Partial Class Form1
         Me.GreenPB = New System.Windows.Forms.PictureBox()
         Me.BluePB = New System.Windows.Forms.PictureBox()
         Me.PurplePB = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ExitPB = New System.Windows.Forms.PictureBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Custom1Label = New System.Windows.Forms.Label()
+        Me.Custom2Label = New System.Windows.Forms.Label()
         Me.StartPanel.SuspendLayout()
+        CType(Me.SettingPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SubjectPanel.SuspendLayout()
         Me.GamePanel.SuspendLayout()
-        Me.SettingsPanel.SuspendLayout()
         CType(Me.HangManPB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SettingsPanel.SuspendLayout()
         CType(Me.SettingsBackPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RedPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.OrangePb, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -61,14 +65,12 @@ Partial Class Form1
         CType(Me.GreenPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BluePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurplePB, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StartPanel
         '
         Me.StartPanel.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.StartPanel.Controls.Add(Me.PictureBox1)
+        Me.StartPanel.Controls.Add(Me.SettingPB)
         Me.StartPanel.Controls.Add(Me.Label1)
         Me.StartPanel.Controls.Add(Me.ExitPB)
         Me.StartPanel.Controls.Add(Me.StartButton)
@@ -76,6 +78,17 @@ Partial Class Form1
         Me.StartPanel.Name = "StartPanel"
         Me.StartPanel.Size = New System.Drawing.Size(800, 450)
         Me.StartPanel.TabIndex = 0
+        '
+        'SettingPB
+        '
+        Me.SettingPB.BackgroundImage = Global.Hangman.My.Resources.Resources.SettingsIcon
+        Me.SettingPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.SettingPB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.SettingPB.Location = New System.Drawing.Point(731, 393)
+        Me.SettingPB.Name = "SettingPB"
+        Me.SettingPB.Size = New System.Drawing.Size(57, 53)
+        Me.SettingPB.TabIndex = 6
+        Me.SettingPB.TabStop = False
         '
         'Label1
         '
@@ -87,18 +100,33 @@ Partial Class Form1
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Hangman"
         '
+        'ExitPB
+        '
+        Me.ExitPB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.ExitPB.Image = CType(resources.GetObject("ExitPB.Image"), System.Drawing.Image)
+        Me.ExitPB.Location = New System.Drawing.Point(12, 393)
+        Me.ExitPB.Name = "ExitPB"
+        Me.ExitPB.Size = New System.Drawing.Size(56, 54)
+        Me.ExitPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.ExitPB.TabIndex = 4
+        Me.ExitPB.TabStop = False
+        '
         'StartButton
         '
+        Me.StartButton.BackColor = System.Drawing.Color.Transparent
+        Me.StartButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartButton.Location = New System.Drawing.Point(329, 211)
         Me.StartButton.Name = "StartButton"
         Me.StartButton.Size = New System.Drawing.Size(142, 73)
         Me.StartButton.TabIndex = 0
         Me.StartButton.Text = "Play"
-        Me.StartButton.UseVisualStyleBackColor = True
+        Me.StartButton.UseVisualStyleBackColor = False
         '
         'SubjectPanel
         '
         Me.SubjectPanel.BackColor = System.Drawing.Color.PaleGreen
+        Me.SubjectPanel.Controls.Add(Me.Custom2Label)
+        Me.SubjectPanel.Controls.Add(Me.Custom1Label)
         Me.SubjectPanel.Controls.Add(Me.Label3)
         Me.SubjectPanel.Controls.Add(Me.ChemistryLabel)
         Me.SubjectPanel.Controls.Add(Me.PhysicsLabel)
@@ -179,6 +207,18 @@ Partial Class Form1
         Me.GamePanel.TabIndex = 1
         Me.GamePanel.Visible = False
         '
+        'HangManPB
+        '
+        Me.HangManPB.BackColor = System.Drawing.Color.Gainsboro
+        Me.HangManPB.BackgroundImage = Global.Hangman.My.Resources.Resources.HangmanBackImage
+        Me.HangManPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.HangManPB.Location = New System.Drawing.Point(448, 17)
+        Me.HangManPB.Name = "HangManPB"
+        Me.HangManPB.Size = New System.Drawing.Size(340, 412)
+        Me.HangManPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.HangManPB.TabIndex = 8
+        Me.HangManPB.TabStop = False
+        '
         'ScoreLabel
         '
         Me.ScoreLabel.AutoSize = True
@@ -241,28 +281,6 @@ Partial Class Form1
         Me.SettingsPanel.Size = New System.Drawing.Size(800, 450)
         Me.SettingsPanel.TabIndex = 9
         Me.SettingsPanel.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(35, 17)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(135, 39)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Colours"
-        '
-        'HangManPB
-        '
-        Me.HangManPB.BackColor = System.Drawing.Color.Gainsboro
-        Me.HangManPB.BackgroundImage = Global.Hangman.My.Resources.Resources.HangmanBackImage
-        Me.HangManPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.HangManPB.Location = New System.Drawing.Point(448, 17)
-        Me.HangManPB.Name = "HangManPB"
-        Me.HangManPB.Size = New System.Drawing.Size(340, 412)
-        Me.HangManPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.HangManPB.TabIndex = 8
-        Me.HangManPB.TabStop = False
         '
         'SettingsBackPB
         '
@@ -336,48 +354,66 @@ Partial Class Form1
         Me.PurplePB.TabIndex = 6
         Me.PurplePB.TabStop = False
         '
-        'PictureBox1
+        'Label2
         '
-        Me.PictureBox1.BackgroundImage = Global.Hangman.My.Resources.Resources.SettingsIcon
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Location = New System.Drawing.Point(731, 393)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(57, 53)
-        Me.PictureBox1.TabIndex = 6
-        Me.PictureBox1.TabStop = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(35, 17)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(135, 39)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Colours"
         '
-        'ExitPB
+        'Custom1Label
         '
-        Me.ExitPB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.ExitPB.Image = CType(resources.GetObject("ExitPB.Image"), System.Drawing.Image)
-        Me.ExitPB.Location = New System.Drawing.Point(12, 393)
-        Me.ExitPB.Name = "ExitPB"
-        Me.ExitPB.Size = New System.Drawing.Size(56, 54)
-        Me.ExitPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.ExitPB.TabIndex = 4
-        Me.ExitPB.TabStop = False
+        Me.Custom1Label.AutoSize = True
+        Me.Custom1Label.BackColor = System.Drawing.Color.LightGray
+        Me.Custom1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Custom1Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Custom1Label.Location = New System.Drawing.Point(226, 334)
+        Me.Custom1Label.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.Custom1Label.Name = "Custom1Label"
+        Me.Custom1Label.Size = New System.Drawing.Size(125, 33)
+        Me.Custom1Label.TabIndex = 4
+        Me.Custom1Label.Text = "Custom1"
+        Me.Custom1Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Custom2Label
+        '
+        Me.Custom2Label.AutoSize = True
+        Me.Custom2Label.BackColor = System.Drawing.Color.LightGray
+        Me.Custom2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Custom2Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Custom2Label.Location = New System.Drawing.Point(448, 334)
+        Me.Custom2Label.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.Custom2Label.Name = "Custom2Label"
+        Me.Custom2Label.Size = New System.Drawing.Size(125, 33)
+        Me.Custom2Label.TabIndex = 5
+        Me.Custom2Label.Text = "Custom2"
+        Me.Custom2Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.GamePanel)
-        Me.Controls.Add(Me.SubjectPanel)
-        Me.Controls.Add(Me.SettingsPanel)
         Me.Controls.Add(Me.StartPanel)
+        Me.Controls.Add(Me.SubjectPanel)
+        Me.Controls.Add(Me.GamePanel)
+        Me.Controls.Add(Me.SettingsPanel)
         Me.Name = "Form1"
         Me.Text = "Start"
         Me.StartPanel.ResumeLayout(False)
         Me.StartPanel.PerformLayout()
+        CType(Me.SettingPB, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SubjectPanel.ResumeLayout(False)
         Me.SubjectPanel.PerformLayout()
         Me.GamePanel.ResumeLayout(False)
         Me.GamePanel.PerformLayout()
+        CType(Me.HangManPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SettingsPanel.ResumeLayout(False)
         Me.SettingsPanel.PerformLayout()
-        CType(Me.HangManPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SettingsBackPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RedPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.OrangePb, System.ComponentModel.ISupportInitialize).EndInit()
@@ -385,8 +421,6 @@ Partial Class Form1
         CType(Me.GreenPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BluePB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurplePB, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -414,7 +448,9 @@ Partial Class Form1
     Friend WithEvents OrangePb As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents RedPB As PictureBox
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents SettingPB As PictureBox
     Friend WithEvents SettingsBackPB As PictureBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents Custom2Label As Label
+    Friend WithEvents Custom1Label As Label
 End Class
