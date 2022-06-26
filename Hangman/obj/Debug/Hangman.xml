@@ -22,7 +22,27 @@ Hangman
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="P:Hangman.My.Resources.Resources.pixil_frame_0__15_">
+<member name="P:Hangman.My.Resources.Resources.BackIcon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hangman.My.Resources.Resources.ComputerBackground">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hangman.My.Resources.Resources.ExitIcon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hangman.My.Resources.Resources.HangmanBackImage">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Hangman.My.Resources.Resources.SettingsIcon">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

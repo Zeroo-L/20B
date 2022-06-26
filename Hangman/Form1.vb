@@ -8,7 +8,8 @@ Public Class Form1
     Dim GuessedIndex As Integer = 0 'Index for the array of guseed latters
     Dim Lives As Integer = 10 'How many lives the player has
     Dim Score As Integer = 0 'THe score player has earn
-    Dim Subject As String
+    Dim Subject As Integer 'Selected subject by the user
+    Dim LeaderBoard(5) As String
 
     'Starting Screen
     Private Sub Start_Button_Click(sender As Object, e As EventArgs) Handles StartButton.Click
@@ -20,33 +21,84 @@ Public Class Form1
         Application.Exit()
     End Sub
 
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        StartPanel.Visible = False
+        SettingsPanel.Visible = True
+    End Sub
+
+    'Setting screen
+    Private Sub SettingsBackPB_Click(sender As Object, e As EventArgs) Handles SettingsBackPB.Click
+        SettingsPanel.Visible = False
+        StartPanel.Visible = True
+    End Sub
+
+    Private Sub RedPB_Click(sender As Object, e As EventArgs) Handles RedPB.Click
+        StartPanel.BackColor = Color.LightCoral
+        SubjectPanel.BackColor = Color.LightCoral
+        GamePanel.BackColor = Color.LightCoral
+        SettingsPanel.BackColor = Color.LightCoral
+    End Sub
+
+    Private Sub OrangePb_Click(sender As Object, e As EventArgs) Handles OrangePb.Click
+        StartPanel.BackColor = Color.LightSalmon
+        SubjectPanel.BackColor = Color.LightSalmon
+        GamePanel.BackColor = Color.LightSalmon
+        SettingsPanel.BackColor = Color.LightSalmon
+    End Sub
+
+    Private Sub YellowPb_Click(sender As Object, e As EventArgs) Handles YellowPb.Click
+        StartPanel.BackColor = Color.Khaki
+        SubjectPanel.BackColor = Color.Khaki
+        GamePanel.BackColor = Color.Khaki
+        SettingsPanel.BackColor = Color.Khaki
+    End Sub
+
+    Private Sub GreenPB_Click(sender As Object, e As EventArgs) Handles GreenPB.Click
+        StartPanel.BackColor = Color.PaleGreen
+        SubjectPanel.BackColor = Color.PaleGreen
+        GamePanel.BackColor = Color.PaleGreen
+        SettingsPanel.BackColor = Color.PaleGreen
+    End Sub
+
+    Private Sub BluePB_Click(sender As Object, e As EventArgs) Handles BluePB.Click
+        StartPanel.BackColor = Color.PaleTurquoise
+        SubjectPanel.BackColor = Color.PaleTurquoise
+        GamePanel.BackColor = Color.PaleTurquoise
+        SettingsPanel.BackColor = Color.PaleTurquoise
+    End Sub
+
+    Private Sub PurplePB_Click(sender As Object, e As EventArgs) Handles PurplePB.Click
+        StartPanel.BackColor = Color.Plum
+        SubjectPanel.BackColor = Color.Plum
+        GamePanel.BackColor = Color.Plum
+        SettingsPanel.BackColor = Color.Plum
+    End Sub
+
     'Subject Screen
     Private Sub SoftwareLabel_Click(sender As Object, e As EventArgs) Handles SoftwareLabel.Click
-        Subject = "Software"
+        Subject = 0
         Call GenerateRandomWord(".\assets\Software.txt")
         SubjectPanel.Visible = False
         GamePanel.Visible = True
     End Sub
 
     Private Sub PhysicsLabel_Click(sender As Object, e As EventArgs) Handles PhysicsLabel.Click
-        Subject = "Physics"
+        Subject = 1
         Call GenerateRandomWord(".\assets\Physics.txt")
         SubjectPanel.Visible = False
         GamePanel.Visible = True
     End Sub
 
     Private Sub ChemistryLabel_Click(sender As Object, e As EventArgs) Handles ChemistryLabel.Click
-        Subject = "Chemistry"
+        Subject = 2
         Call GenerateRandomWord(".\assets\Chemistry.txt")
         SubjectPanel.Visible = False
         GamePanel.Visible = True
     End Sub
 
-    Private Sub Start_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         InputBox.MaxLength() = 1
         ScoreLabel.Text = 0
-
         HangManImage()
     End Sub
 
@@ -113,7 +165,7 @@ Public Class Form1
         For i = 0 To GuessedIndex
             Console.WriteLine(GuessedLetters(i))
         Next
-        GuessLetters.Text = Join(ProgressArray, " ")
+        GuessLettersLabel.Text = Join(ProgressArray, " ")
         GuessedLettersLabel.Text = Join(GuessedLetters, " ")
 
         HangManImage()
@@ -124,11 +176,11 @@ Public Class Form1
         If Join(ProgressArray, "") = Join(WordArray, "") Then
             Score = Score + 1
             Select Case Subject
-                Case "Software"
+                Case 0
                     Call GenerateRandomWord(".\assets\Software.txt")
-                Case "Physics"
+                Case 1
                     Call GenerateRandomWord(".\assets\physics.txt")
-                Case "Chemistry"
+                Case 2
                     Call GenerateRandomWord(".\assets\Chemistry.txt")
             End Select
 
@@ -141,10 +193,10 @@ Public Class Form1
     Function GenerateRandomWord(ByVal location As String)
         Randomize()
         Dim ListArray As String() = File.ReadAllLines(location)
-        For i = 0 To ListArray.Length - 1
-            Console.WriteLine(ListArray(i))
-        Next
         GuessWord = ListArray(Int(ListArray.Length * Rnd()))
+        If GuessWord.Length > 15 Then
+            GuessLettersLabel.Font = New Font("Microsoft Sans Serif", 15, FontStyle.Regular)
+        End If
         Console.WriteLine(GuessWord)
 
         ReDim WordArray(GuessWord.Length() - 1)
@@ -158,7 +210,7 @@ Public Class Form1
             End If
         Next
 
-        GuessLetters.Text = Join(ProgressArray, " ")
+        GuessLettersLabel.Text = Join(ProgressArray, " ")
 
         GuessedLettersLabel.Text = Join(GuessedLetters, " ")
     End Function
@@ -195,6 +247,5 @@ Public Class Form1
             Case 0
         End Select
     End Sub
-
 
 End Class

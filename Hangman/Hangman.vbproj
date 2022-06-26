@@ -118,9 +118,29 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-50.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pixil-frame-0 %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fire-exit-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fire-exit-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-computer-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1544017669-95b7772dee05.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo-1544017669-95b7772dee05.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
