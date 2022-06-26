@@ -1,3 +1,78 @@
-Software
-Hard Drive
-Central Processing Unit
+Abstraction
+Acceptance Testing
+Accumulator
+Alpha Testing
+Agile
+AI
+Algorithm
+ALU
+Argument
+Array
+ASCII
+Assignment
+Attribute
+Authorship
+Backup
+Backus Naur Form
+Backward Chaining
+Benchmark
+Benchmarking
+Beta Testing
+Binary Digit
+Binary Number System
+Binary Search
+Bit
+Black Box
+Black Box Testing
+BMP
+BNF
+Boolean Variable
+Breakpoints
+Bubble Sort
+CASE Tools
+Class
+Code of Conduct
+Compilation
+Constraint
+Contract
+Control Structure
+Copyright
+Counterfeiting
+Data Dictionary
+Data Flow Diagram
+Data Validation
+Debugging
+Decompilation
+Design Specifications
+Desk Checking
+Direct Conversion
+Driver
+EBNF
+Encapsulation
+End User
+End User Development
+Environment
+Equity
+Ergonomics
+Ethics
+Expert System Shell
+Feasibility Study
+Feedback
+File
+File Asssociation
+Flag
+Flowchart
+Foward Compatible
+Fourth Generation Language
+Freeware
+Function
+Fuctional Language
+Gantt Chart
+Graphical User Interface
+GUI
+Hardware
+Heuristic
+Hexadecimal
+Imperative Language
+Incremental Compilation
+Index

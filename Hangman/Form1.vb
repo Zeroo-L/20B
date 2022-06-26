@@ -113,6 +113,7 @@ Public Class Form1
         GamePanel.Visible = True
     End Sub
 
+    'Custom Subject 1
     Private Sub Custom1Label_Click(sender As Object, e As EventArgs) Handles Custom1Label.Click
         Subject = 3
 
@@ -124,6 +125,7 @@ Public Class Form1
 
     End Sub
 
+    'Custom Subject 2
     Private Sub Custom2Label_Click(sender As Object, e As EventArgs) Handles Custom2Label.Click
         Subject = 4
 
