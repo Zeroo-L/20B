@@ -29,6 +29,8 @@ Partial Class Form1
         Me.ExitPB = New System.Windows.Forms.PictureBox()
         Me.StartButton = New System.Windows.Forms.Button()
         Me.SubjectPanel = New System.Windows.Forms.Panel()
+        Me.Custom2Label = New System.Windows.Forms.Label()
+        Me.Custom1Label = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ChemistryLabel = New System.Windows.Forms.Label()
         Me.PhysicsLabel = New System.Windows.Forms.Label()
@@ -37,7 +39,7 @@ Partial Class Form1
         Me.HangManPB = New System.Windows.Forms.PictureBox()
         Me.ScoreLabel = New System.Windows.Forms.Label()
         Me.GuessedLettersLabel = New System.Windows.Forms.Label()
-        Me.InputBox = New System.Windows.Forms.TextBox()
+        Me.UserInputBox = New System.Windows.Forms.TextBox()
         Me.GuessLettersLabel = New System.Windows.Forms.Label()
         Me.Button_Enter = New System.Windows.Forms.Button()
         Me.SettingsPanel = New System.Windows.Forms.Panel()
@@ -49,8 +51,9 @@ Partial Class Form1
         Me.BluePB = New System.Windows.Forms.PictureBox()
         Me.PurplePB = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Custom1Label = New System.Windows.Forms.Label()
-        Me.Custom2Label = New System.Windows.Forms.Label()
+        Me.LeaderboardPanel = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Leaderboardlabel = New System.Windows.Forms.Label()
         Me.StartPanel.SuspendLayout()
         CType(Me.SettingPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -65,6 +68,7 @@ Partial Class Form1
         CType(Me.GreenPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BluePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurplePB, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.LeaderboardPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'StartPanel
@@ -138,6 +142,34 @@ Partial Class Form1
         Me.SubjectPanel.TabIndex = 5
         Me.SubjectPanel.Visible = False
         '
+        'Custom2Label
+        '
+        Me.Custom2Label.AutoSize = True
+        Me.Custom2Label.BackColor = System.Drawing.Color.LightGray
+        Me.Custom2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Custom2Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Custom2Label.Location = New System.Drawing.Point(448, 334)
+        Me.Custom2Label.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.Custom2Label.Name = "Custom2Label"
+        Me.Custom2Label.Size = New System.Drawing.Size(125, 33)
+        Me.Custom2Label.TabIndex = 5
+        Me.Custom2Label.Text = "Custom2"
+        Me.Custom2Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Custom1Label
+        '
+        Me.Custom1Label.AutoSize = True
+        Me.Custom1Label.BackColor = System.Drawing.Color.LightGray
+        Me.Custom1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.Custom1Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Custom1Label.Location = New System.Drawing.Point(226, 334)
+        Me.Custom1Label.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.Custom1Label.Name = "Custom1Label"
+        Me.Custom1Label.Size = New System.Drawing.Size(125, 33)
+        Me.Custom1Label.TabIndex = 4
+        Me.Custom1Label.Text = "Custom1"
+        Me.Custom1Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -197,7 +229,7 @@ Partial Class Form1
         Me.GamePanel.Controls.Add(Me.HangManPB)
         Me.GamePanel.Controls.Add(Me.ScoreLabel)
         Me.GamePanel.Controls.Add(Me.GuessedLettersLabel)
-        Me.GamePanel.Controls.Add(Me.InputBox)
+        Me.GamePanel.Controls.Add(Me.UserInputBox)
         Me.GamePanel.Controls.Add(Me.GuessLettersLabel)
         Me.GamePanel.Controls.Add(Me.Button_Enter)
         Me.GamePanel.Dock = System.Windows.Forms.DockStyle.Fill
@@ -239,12 +271,12 @@ Partial Class Form1
         Me.GuessedLettersLabel.TabIndex = 5
         Me.GuessedLettersLabel.Text = "Used Letters"
         '
-        'InputBox
+        'UserInputBox
         '
-        Me.InputBox.Location = New System.Drawing.Point(12, 173)
-        Me.InputBox.Name = "InputBox"
-        Me.InputBox.Size = New System.Drawing.Size(303, 20)
-        Me.InputBox.TabIndex = 4
+        Me.UserInputBox.Location = New System.Drawing.Point(12, 173)
+        Me.UserInputBox.Name = "UserInputBox"
+        Me.UserInputBox.Size = New System.Drawing.Size(303, 20)
+        Me.UserInputBox.TabIndex = 4
         '
         'GuessLettersLabel
         '
@@ -364,42 +396,48 @@ Partial Class Form1
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Colours"
         '
-        'Custom1Label
+        'LeaderboardPanel
         '
-        Me.Custom1Label.AutoSize = True
-        Me.Custom1Label.BackColor = System.Drawing.Color.LightGray
-        Me.Custom1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Custom1Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Custom1Label.Location = New System.Drawing.Point(226, 334)
-        Me.Custom1Label.MaximumSize = New System.Drawing.Size(200, 0)
-        Me.Custom1Label.Name = "Custom1Label"
-        Me.Custom1Label.Size = New System.Drawing.Size(125, 33)
-        Me.Custom1Label.TabIndex = 4
-        Me.Custom1Label.Text = "Custom1"
-        Me.Custom1Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.LeaderboardPanel.BackColor = System.Drawing.Color.Plum
+        Me.LeaderboardPanel.Controls.Add(Me.Leaderboardlabel)
+        Me.LeaderboardPanel.Controls.Add(Me.Label4)
+        Me.LeaderboardPanel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.LeaderboardPanel.Location = New System.Drawing.Point(0, 0)
+        Me.LeaderboardPanel.Name = "LeaderboardPanel"
+        Me.LeaderboardPanel.Size = New System.Drawing.Size(800, 450)
+        Me.LeaderboardPanel.TabIndex = 9
+        Me.LeaderboardPanel.Visible = False
         '
-        'Custom2Label
+        'Label4
         '
-        Me.Custom2Label.AutoSize = True
-        Me.Custom2Label.BackColor = System.Drawing.Color.LightGray
-        Me.Custom2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Custom2Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Custom2Label.Location = New System.Drawing.Point(448, 334)
-        Me.Custom2Label.MaximumSize = New System.Drawing.Size(200, 0)
-        Me.Custom2Label.Name = "Custom2Label"
-        Me.Custom2Label.Size = New System.Drawing.Size(125, 33)
-        Me.Custom2Label.TabIndex = 5
-        Me.Custom2Label.Text = "Custom2"
-        Me.Custom2Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Plum
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.No
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(3, 4)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(384, 69)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Leaderboard:"
+        '
+        'Leaderboardlabel
+        '
+        Me.Leaderboardlabel.AutoSize = True
+        Me.Leaderboardlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Leaderboardlabel.Location = New System.Drawing.Point(279, 73)
+        Me.Leaderboardlabel.Name = "Leaderboardlabel"
+        Me.Leaderboardlabel.Size = New System.Drawing.Size(0, 46)
+        Me.Leaderboardlabel.TabIndex = 1
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.GamePanel)
+        Me.Controls.Add(Me.LeaderboardPanel)
         Me.Controls.Add(Me.StartPanel)
         Me.Controls.Add(Me.SubjectPanel)
-        Me.Controls.Add(Me.GamePanel)
         Me.Controls.Add(Me.SettingsPanel)
         Me.Name = "Form1"
         Me.Text = "Start"
@@ -421,6 +459,8 @@ Partial Class Form1
         CType(Me.GreenPB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BluePB, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PurplePB, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.LeaderboardPanel.ResumeLayout(False)
+        Me.LeaderboardPanel.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -430,7 +470,7 @@ Partial Class Form1
     Friend WithEvents GamePanel As Panel
     Friend WithEvents Button_Enter As Button
     Friend WithEvents GuessLettersLabel As Label
-    Friend WithEvents InputBox As TextBox
+    Friend WithEvents UserInputBox As TextBox
     Friend WithEvents GuessedLettersLabel As Label
     Friend WithEvents ScoreLabel As Label
     Friend WithEvents HangManPB As PictureBox
@@ -453,4 +493,7 @@ Partial Class Form1
     Friend WithEvents Label3 As Label
     Friend WithEvents Custom2Label As Label
     Friend WithEvents Custom1Label As Label
+    Friend WithEvents LeaderboardPanel As Panel
+    Friend WithEvents Leaderboardlabel As Label
+    Friend WithEvents Label4 As Label
 End Class
