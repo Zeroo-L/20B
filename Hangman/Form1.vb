@@ -1,4 +1,6 @@
 ﻿Imports System.IO
+Imports System.Linq
+Imports System.Collections
 
 Public Class Form1
     Dim GuessWord As String 'The random guess word chosen from different files
@@ -15,6 +17,7 @@ Public Class Form1
         InputBox.MaxLength() = 1
         ScoreLabel.Text = 0
         HangManImage()
+
     End Sub
 
     'Starting Screen
@@ -88,33 +91,33 @@ Public Class Form1
         SettingsPanel.BackColor = Color.Plum
     End Sub
 
-    'Subject Screen
-    'Software Label
-    Private Sub SoftwareLabel_Click(sender As Object, e As EventArgs) Handles SoftwareLabel.Click
+    'Subject Screens
+    'Choosing Subjects
+    Private Sub SoftwareLabel_Click(sender As Object, e As EventArgs) Handles SoftwareLabel.Click 'Software Subject
         Subject = 0
         Call GenerateRandomWord(".\assets\Software.txt")
         SubjectPanel.Visible = False
         GamePanel.Visible = True
     End Sub
 
-    'Physics Label
-    Private Sub PhysicsLabel_Click(sender As Object, e As EventArgs) Handles PhysicsLabel.Click
+
+    Private Sub PhysicsLabel_Click(sender As Object, e As EventArgs) Handles PhysicsLabel.Click 'Physics Subject
         Subject = 1
         Call GenerateRandomWord(".\assets\Physics.txt")
         SubjectPanel.Visible = False
         GamePanel.Visible = True
     End Sub
 
-    'Chemistry Label
-    Private Sub ChemistryLabel_Click(sender As Object, e As EventArgs) Handles ChemistryLabel.Click
+
+    Private Sub ChemistryLabel_Click(sender As Object, e As EventArgs) Handles ChemistryLabel.Click 'Chemistry Subject
         Subject = 2
         Call GenerateRandomWord(".\assets\Chemistry.txt")
         SubjectPanel.Visible = False
         GamePanel.Visible = True
     End Sub
 
-    'Custom Subject 1
-    Private Sub Custom1Label_Click(sender As Object, e As EventArgs) Handles Custom1Label.Click
+
+    Private Sub Custom1Label_Click(sender As Object, e As EventArgs) Handles Custom1Label.Click 'Custom User Subject 1
         Subject = 3
 
         If System.IO.File.Exists(".\assets\custom1.txt") Then
@@ -125,8 +128,8 @@ Public Class Form1
 
     End Sub
 
-    'Custom Subject 2
-    Private Sub Custom2Label_Click(sender As Object, e As EventArgs) Handles Custom2Label.Click
+
+    Private Sub Custom2Label_Click(sender As Object, e As EventArgs) Handles Custom2Label.Click 'Custom User Subject 2
         Subject = 4
 
         If System.IO.File.Exists(".\assets\custom2.txt") Then
@@ -141,6 +144,7 @@ Public Class Form1
         Call MainGameLoop()
     End Sub
 
+    '[Enter] Keystroke
     Private Sub InputBox_KeyDown(sender As Object, e As KeyEventArgs) Handles InputBox.KeyDown
         If e.KeyCode = Keys.Enter Then
             Console.WriteLine("Enter is pressed")
@@ -159,6 +163,8 @@ Public Class Form1
         End If
 
     End Sub
+
+    '-----------------------------------------------------------------------------------------------------------------------------------------
 
     Private Sub MainGameLoop()
         Dim Correct As Boolean = False
