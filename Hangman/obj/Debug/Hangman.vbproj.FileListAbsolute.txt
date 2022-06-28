@@ -32,9 +32,7 @@ C:\Users\legolas.lau\Downloads\20b\Hangman\bin\Debug\Hangman.pdb
 C:\Users\legolas.lau\Downloads\20b\Hangman\bin\Debug\Hangman.xml
 C:\Users\legolas.lau\Downloads\20b\Hangman\obj\Debug\Hangman.vbprojResolveAssemblyReference.cache
 C:\Users\legolas.lau\Downloads\20b\Hangman\obj\Debug\Hangman.Form1.resources
-C:\Users\legolas.lau\Downloads\20b\Hangman\obj\Debug\Hangman.Main.resources
 C:\Users\legolas.lau\Downloads\20b\Hangman\obj\Debug\Hangman.Resources.resources
-C:\Users\legolas.lau\Downloads\20b\Hangman\obj\Debug\Hangman.Start.resources
 C:\Users\legolas.lau\Downloads\20b\Hangman\obj\Debug\Hangman.vbproj.GenerateResource.Cache
 C:\Users\legolas.lau\Downloads\20b\Hangman\obj\Debug\Hangman.vbproj.CoreCompileInputs.cache
 C:\Users\legolas.lau\Downloads\20b\Hangman\obj\Debug\Hangman.exe

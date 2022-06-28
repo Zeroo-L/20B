@@ -7,7 +7,7 @@ Public Class Form1
     Dim GuessedLetters(100) As String 'Array of the guessed letters
     Dim GuessedIndex As Integer = 0 'Index for the array of guseed latters
     Dim Lives As Integer = 10 'How many lives the player has
-    Dim Score As Integer = 0 'THe score player has earn
+    Dim Score As Integer = 0 'The score player has earn
     Dim Subject As Integer 'Selected subject by the user
     Dim lines() As String = File.ReadAllLines(".\assets\leaderboard.txt")
     Dim leaderboard(lines.Length - 1, 1) As String
@@ -18,7 +18,6 @@ Public Class Form1
         UserInputBox.MaxLength() = 1
         ScoreLabel.Text = 0
         HangManImage()
-
 
 
         For i As Integer = 0 To lines.Length - 1
@@ -115,6 +114,7 @@ Public Class Form1
     'Choosing Subjects
     Private Sub SoftwareLabel_Click(sender As Object, e As EventArgs) Handles SoftwareLabel.Click 'Software Subject
         Subject = 0
+
         Call GenerateRandomWord(".\assets\Software.txt")
         SubjectPanel.Visible = False
         GamePanel.Visible = True
@@ -123,6 +123,7 @@ Public Class Form1
 
     Private Sub PhysicsLabel_Click(sender As Object, e As EventArgs) Handles PhysicsLabel.Click 'Physics Subject
         Subject = 1
+
         Call GenerateRandomWord(".\assets\Physics.txt")
         SubjectPanel.Visible = False
         GamePanel.Visible = True
@@ -259,8 +260,18 @@ Public Class Form1
                     For i = 0 To 4
                         Leaderboardlabel.Text = Leaderboardlabel.Text + ControlChars.NewLine + leaderboard(i, 0) + ": " + leaderboard(i, 1)
                     Next
+
+                    System.IO.File.WriteAllText(".\assets\leaderboard.txt", "")
+
+                    Using sw As StreamWriter = File.AppendText(".\assets\leaderboard.txt")
+                        For i = 0 To 4
+                            sw.WriteLine(leaderboard(i, 0) + "," + leaderboard(i, 1))
+                        Next
+                    End Using
+
                     GamePanel.Visible = False
                     LeaderboardPanel.Visible = True
+
                 Case < Convert.ToInt32(leaderboard(4, 1))
                     MsgBox("Score too low for leaderboard", 0, "Message")
                     GamePanel.Visible = False
@@ -319,6 +330,15 @@ Public Class Form1
             For i = 0 To 4
                 Leaderboardlabel.Text = Leaderboardlabel.Text + ControlChars.NewLine + leaderboard(i, 0) + ": " + leaderboard(i, 1)
             Next
+
+            System.IO.File.WriteAllText(".\assets\leaderboard.txt", "")
+
+            Using sw As StreamWriter = File.AppendText(".\assets\leaderboard.txt")
+                For i = 0 To 4
+                    sw.WriteLine(leaderboard(i, 0) + "," + leaderboard(i, 1))
+                Next
+            End Using
+
 
             GamePanel.Visible = False
             LeaderboardPanel.Visible = True

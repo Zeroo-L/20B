@@ -52,8 +52,8 @@ Partial Class Form1
         Me.PurplePB = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LeaderboardPanel = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Leaderboardlabel = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.StartPanel.SuspendLayout()
         CType(Me.SettingPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -408,6 +408,15 @@ Partial Class Form1
         Me.LeaderboardPanel.TabIndex = 9
         Me.LeaderboardPanel.Visible = False
         '
+        'Leaderboardlabel
+        '
+        Me.Leaderboardlabel.AutoSize = True
+        Me.Leaderboardlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Leaderboardlabel.Location = New System.Drawing.Point(279, 73)
+        Me.Leaderboardlabel.Name = "Leaderboardlabel"
+        Me.Leaderboardlabel.Size = New System.Drawing.Size(0, 46)
+        Me.Leaderboardlabel.TabIndex = 1
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -420,24 +429,15 @@ Partial Class Form1
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Leaderboard:"
         '
-        'Leaderboardlabel
-        '
-        Me.Leaderboardlabel.AutoSize = True
-        Me.Leaderboardlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Leaderboardlabel.Location = New System.Drawing.Point(279, 73)
-        Me.Leaderboardlabel.Name = "Leaderboardlabel"
-        Me.Leaderboardlabel.Size = New System.Drawing.Size(0, 46)
-        Me.Leaderboardlabel.TabIndex = 1
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.GamePanel)
         Me.Controls.Add(Me.LeaderboardPanel)
         Me.Controls.Add(Me.StartPanel)
         Me.Controls.Add(Me.SubjectPanel)
+        Me.Controls.Add(Me.GamePanel)
         Me.Controls.Add(Me.SettingsPanel)
         Me.Name = "Form1"
         Me.Text = "Start"
