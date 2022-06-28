@@ -54,6 +54,7 @@ Partial Class Form1
         Me.LeaderboardPanel = New System.Windows.Forms.Panel()
         Me.Leaderboardlabel = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.LeaderboardBack = New System.Windows.Forms.PictureBox()
         Me.StartPanel.SuspendLayout()
         CType(Me.SettingPB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ExitPB, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -69,6 +70,7 @@ Partial Class Form1
         CType(Me.BluePB, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PurplePB, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LeaderboardPanel.SuspendLayout()
+        CType(Me.LeaderboardBack, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StartPanel
@@ -79,8 +81,9 @@ Partial Class Form1
         Me.StartPanel.Controls.Add(Me.ExitPB)
         Me.StartPanel.Controls.Add(Me.StartButton)
         Me.StartPanel.Location = New System.Drawing.Point(0, 0)
+        Me.StartPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.StartPanel.Name = "StartPanel"
-        Me.StartPanel.Size = New System.Drawing.Size(800, 450)
+        Me.StartPanel.Size = New System.Drawing.Size(1067, 554)
         Me.StartPanel.TabIndex = 0
         '
         'SettingPB
@@ -88,19 +91,21 @@ Partial Class Form1
         Me.SettingPB.BackgroundImage = Global.Hangman.My.Resources.Resources.SettingsIcon
         Me.SettingPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.SettingPB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.SettingPB.Location = New System.Drawing.Point(731, 393)
+        Me.SettingPB.Location = New System.Drawing.Point(975, 484)
+        Me.SettingPB.Margin = New System.Windows.Forms.Padding(4)
         Me.SettingPB.Name = "SettingPB"
-        Me.SettingPB.Size = New System.Drawing.Size(57, 53)
+        Me.SettingPB.Size = New System.Drawing.Size(75, 64)
         Me.SettingPB.TabIndex = 6
         Me.SettingPB.TabStop = False
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Playbill", 90.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(251, 53)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 90.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(156, 48)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(298, 121)
+        Me.Label1.Size = New System.Drawing.Size(720, 170)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Hangman"
         '
@@ -108,9 +113,10 @@ Partial Class Form1
         '
         Me.ExitPB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ExitPB.Image = CType(resources.GetObject("ExitPB.Image"), System.Drawing.Image)
-        Me.ExitPB.Location = New System.Drawing.Point(12, 393)
+        Me.ExitPB.Location = New System.Drawing.Point(16, 484)
+        Me.ExitPB.Margin = New System.Windows.Forms.Padding(4)
         Me.ExitPB.Name = "ExitPB"
-        Me.ExitPB.Size = New System.Drawing.Size(56, 54)
+        Me.ExitPB.Size = New System.Drawing.Size(73, 66)
         Me.ExitPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.ExitPB.TabIndex = 4
         Me.ExitPB.TabStop = False
@@ -119,9 +125,10 @@ Partial Class Form1
         '
         Me.StartButton.BackColor = System.Drawing.Color.Transparent
         Me.StartButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.StartButton.Location = New System.Drawing.Point(329, 211)
+        Me.StartButton.Location = New System.Drawing.Point(439, 260)
+        Me.StartButton.Margin = New System.Windows.Forms.Padding(4)
         Me.StartButton.Name = "StartButton"
-        Me.StartButton.Size = New System.Drawing.Size(142, 73)
+        Me.StartButton.Size = New System.Drawing.Size(189, 90)
         Me.StartButton.TabIndex = 0
         Me.StartButton.Text = "Play"
         Me.StartButton.UseVisualStyleBackColor = False
@@ -137,8 +144,9 @@ Partial Class Form1
         Me.SubjectPanel.Controls.Add(Me.SoftwareLabel)
         Me.SubjectPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SubjectPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SubjectPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.SubjectPanel.Name = "SubjectPanel"
-        Me.SubjectPanel.Size = New System.Drawing.Size(800, 450)
+        Me.SubjectPanel.Size = New System.Drawing.Size(1067, 554)
         Me.SubjectPanel.TabIndex = 5
         Me.SubjectPanel.Visible = False
         '
@@ -148,10 +156,11 @@ Partial Class Form1
         Me.Custom2Label.BackColor = System.Drawing.Color.LightGray
         Me.Custom2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Custom2Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Custom2Label.Location = New System.Drawing.Point(448, 334)
-        Me.Custom2Label.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.Custom2Label.Location = New System.Drawing.Point(597, 411)
+        Me.Custom2Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Custom2Label.MaximumSize = New System.Drawing.Size(267, 0)
         Me.Custom2Label.Name = "Custom2Label"
-        Me.Custom2Label.Size = New System.Drawing.Size(125, 33)
+        Me.Custom2Label.Size = New System.Drawing.Size(155, 41)
         Me.Custom2Label.TabIndex = 5
         Me.Custom2Label.Text = "Custom2"
         Me.Custom2Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -162,10 +171,11 @@ Partial Class Form1
         Me.Custom1Label.BackColor = System.Drawing.Color.LightGray
         Me.Custom1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.Custom1Label.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Custom1Label.Location = New System.Drawing.Point(226, 334)
-        Me.Custom1Label.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.Custom1Label.Location = New System.Drawing.Point(301, 411)
+        Me.Custom1Label.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Custom1Label.MaximumSize = New System.Drawing.Size(267, 0)
         Me.Custom1Label.Name = "Custom1Label"
-        Me.Custom1Label.Size = New System.Drawing.Size(125, 33)
+        Me.Custom1Label.Size = New System.Drawing.Size(155, 41)
         Me.Custom1Label.TabIndex = 4
         Me.Custom1Label.Text = "Custom1"
         Me.Custom1Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -175,9 +185,10 @@ Partial Class Form1
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(203, 55)
+        Me.Label3.Location = New System.Drawing.Point(271, 68)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(393, 46)
+        Me.Label3.Size = New System.Drawing.Size(489, 58)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Choose Your subject"
         '
@@ -187,10 +198,11 @@ Partial Class Form1
         Me.ChemistryLabel.BackColor = System.Drawing.Color.LightGray
         Me.ChemistryLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.ChemistryLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ChemistryLabel.Location = New System.Drawing.Point(572, 211)
-        Me.ChemistryLabel.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.ChemistryLabel.Location = New System.Drawing.Point(763, 260)
+        Me.ChemistryLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.ChemistryLabel.MaximumSize = New System.Drawing.Size(267, 0)
         Me.ChemistryLabel.Name = "ChemistryLabel"
-        Me.ChemistryLabel.Size = New System.Drawing.Size(139, 33)
+        Me.ChemistryLabel.Size = New System.Drawing.Size(172, 41)
         Me.ChemistryLabel.TabIndex = 2
         Me.ChemistryLabel.Text = "Chemistry"
         Me.ChemistryLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -201,10 +213,11 @@ Partial Class Form1
         Me.PhysicsLabel.BackColor = System.Drawing.Color.LightGray
         Me.PhysicsLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.PhysicsLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PhysicsLabel.Location = New System.Drawing.Point(340, 211)
-        Me.PhysicsLabel.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.PhysicsLabel.Location = New System.Drawing.Point(453, 260)
+        Me.PhysicsLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.PhysicsLabel.MaximumSize = New System.Drawing.Size(267, 0)
         Me.PhysicsLabel.Name = "PhysicsLabel"
-        Me.PhysicsLabel.Size = New System.Drawing.Size(111, 33)
+        Me.PhysicsLabel.Size = New System.Drawing.Size(137, 41)
         Me.PhysicsLabel.TabIndex = 1
         Me.PhysicsLabel.Text = "Physics"
         Me.PhysicsLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -215,10 +228,11 @@ Partial Class Form1
         Me.SoftwareLabel.BackColor = System.Drawing.Color.LightGray
         Me.SoftwareLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.SoftwareLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SoftwareLabel.Location = New System.Drawing.Point(57, 177)
-        Me.SoftwareLabel.MaximumSize = New System.Drawing.Size(200, 0)
+        Me.SoftwareLabel.Location = New System.Drawing.Point(76, 218)
+        Me.SoftwareLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.SoftwareLabel.MaximumSize = New System.Drawing.Size(267, 0)
         Me.SoftwareLabel.Name = "SoftwareLabel"
-        Me.SoftwareLabel.Size = New System.Drawing.Size(176, 95)
+        Me.SoftwareLabel.Size = New System.Drawing.Size(220, 119)
         Me.SoftwareLabel.TabIndex = 0
         Me.SoftwareLabel.Text = "Software Design And Development"
         Me.SoftwareLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -234,8 +248,9 @@ Partial Class Form1
         Me.GamePanel.Controls.Add(Me.Button_Enter)
         Me.GamePanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GamePanel.Location = New System.Drawing.Point(0, 0)
+        Me.GamePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.GamePanel.Name = "GamePanel"
-        Me.GamePanel.Size = New System.Drawing.Size(800, 450)
+        Me.GamePanel.Size = New System.Drawing.Size(1067, 554)
         Me.GamePanel.TabIndex = 1
         Me.GamePanel.Visible = False
         '
@@ -244,9 +259,10 @@ Partial Class Form1
         Me.HangManPB.BackColor = System.Drawing.Color.Gainsboro
         Me.HangManPB.BackgroundImage = Global.Hangman.My.Resources.Resources.HangmanBackImage
         Me.HangManPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.HangManPB.Location = New System.Drawing.Point(448, 17)
+        Me.HangManPB.Location = New System.Drawing.Point(597, 21)
+        Me.HangManPB.Margin = New System.Windows.Forms.Padding(4)
         Me.HangManPB.Name = "HangManPB"
-        Me.HangManPB.Size = New System.Drawing.Size(340, 412)
+        Me.HangManPB.Size = New System.Drawing.Size(453, 507)
         Me.HangManPB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.HangManPB.TabIndex = 8
         Me.HangManPB.TabStop = False
@@ -255,9 +271,10 @@ Partial Class Form1
         '
         Me.ScoreLabel.AutoSize = True
         Me.ScoreLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScoreLabel.Location = New System.Drawing.Point(11, 17)
+        Me.ScoreLabel.Location = New System.Drawing.Point(15, 21)
+        Me.ScoreLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.ScoreLabel.Name = "ScoreLabel"
-        Me.ScoreLabel.Size = New System.Drawing.Size(85, 31)
+        Me.ScoreLabel.Size = New System.Drawing.Size(106, 39)
         Me.ScoreLabel.TabIndex = 7
         Me.ScoreLabel.Text = "Score"
         '
@@ -265,33 +282,37 @@ Partial Class Form1
         '
         Me.GuessedLettersLabel.AutoSize = True
         Me.GuessedLettersLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GuessedLettersLabel.Location = New System.Drawing.Point(11, 275)
+        Me.GuessedLettersLabel.Location = New System.Drawing.Point(15, 338)
+        Me.GuessedLettersLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.GuessedLettersLabel.Name = "GuessedLettersLabel"
-        Me.GuessedLettersLabel.Size = New System.Drawing.Size(169, 31)
+        Me.GuessedLettersLabel.Size = New System.Drawing.Size(209, 39)
         Me.GuessedLettersLabel.TabIndex = 5
         Me.GuessedLettersLabel.Text = "Used Letters"
         '
         'UserInputBox
         '
-        Me.UserInputBox.Location = New System.Drawing.Point(12, 173)
+        Me.UserInputBox.Location = New System.Drawing.Point(16, 213)
+        Me.UserInputBox.Margin = New System.Windows.Forms.Padding(4)
         Me.UserInputBox.Name = "UserInputBox"
-        Me.UserInputBox.Size = New System.Drawing.Size(303, 20)
+        Me.UserInputBox.Size = New System.Drawing.Size(403, 22)
         Me.UserInputBox.TabIndex = 4
         '
         'GuessLettersLabel
         '
         Me.GuessLettersLabel.AutoSize = True
         Me.GuessLettersLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GuessLettersLabel.Location = New System.Drawing.Point(34, 100)
+        Me.GuessLettersLabel.Location = New System.Drawing.Point(45, 123)
+        Me.GuessLettersLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.GuessLettersLabel.Name = "GuessLettersLabel"
-        Me.GuessLettersLabel.Size = New System.Drawing.Size(0, 46)
+        Me.GuessLettersLabel.Size = New System.Drawing.Size(0, 58)
         Me.GuessLettersLabel.TabIndex = 3
         '
         'Button_Enter
         '
-        Me.Button_Enter.Location = New System.Drawing.Point(343, 173)
+        Me.Button_Enter.Location = New System.Drawing.Point(457, 213)
+        Me.Button_Enter.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_Enter.Name = "Button_Enter"
-        Me.Button_Enter.Size = New System.Drawing.Size(75, 23)
+        Me.Button_Enter.Size = New System.Drawing.Size(100, 28)
         Me.Button_Enter.TabIndex = 2
         Me.Button_Enter.Text = "Enter"
         Me.Button_Enter.UseVisualStyleBackColor = True
@@ -309,8 +330,9 @@ Partial Class Form1
         Me.SettingsPanel.Controls.Add(Me.Label2)
         Me.SettingsPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SettingsPanel.Location = New System.Drawing.Point(0, 0)
+        Me.SettingsPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.SettingsPanel.Name = "SettingsPanel"
-        Me.SettingsPanel.Size = New System.Drawing.Size(800, 450)
+        Me.SettingsPanel.Size = New System.Drawing.Size(1067, 554)
         Me.SettingsPanel.TabIndex = 9
         Me.SettingsPanel.Visible = False
         '
@@ -319,9 +341,10 @@ Partial Class Form1
         Me.SettingsBackPB.BackgroundImage = Global.Hangman.My.Resources.Resources.BackIcon
         Me.SettingsBackPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.SettingsBackPB.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.SettingsBackPB.Location = New System.Drawing.Point(17, 382)
+        Me.SettingsBackPB.Location = New System.Drawing.Point(23, 470)
+        Me.SettingsBackPB.Margin = New System.Windows.Forms.Padding(4)
         Me.SettingsBackPB.Name = "SettingsBackPB"
-        Me.SettingsBackPB.Size = New System.Drawing.Size(56, 56)
+        Me.SettingsBackPB.Size = New System.Drawing.Size(73, 68)
         Me.SettingsBackPB.TabIndex = 7
         Me.SettingsBackPB.TabStop = False
         '
@@ -330,9 +353,10 @@ Partial Class Form1
         Me.RedPB.BackColor = System.Drawing.Color.LightCoral
         Me.RedPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.RedPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.RedPB.Location = New System.Drawing.Point(40, 104)
+        Me.RedPB.Location = New System.Drawing.Point(53, 128)
+        Me.RedPB.Margin = New System.Windows.Forms.Padding(4)
         Me.RedPB.Name = "RedPB"
-        Me.RedPB.Size = New System.Drawing.Size(70, 70)
+        Me.RedPB.Size = New System.Drawing.Size(93, 86)
         Me.RedPB.TabIndex = 0
         Me.RedPB.TabStop = False
         '
@@ -340,9 +364,10 @@ Partial Class Form1
         '
         Me.OrangePb.BackColor = System.Drawing.Color.LightSalmon
         Me.OrangePb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.OrangePb.Location = New System.Drawing.Point(161, 104)
+        Me.OrangePb.Location = New System.Drawing.Point(215, 128)
+        Me.OrangePb.Margin = New System.Windows.Forms.Padding(4)
         Me.OrangePb.Name = "OrangePb"
-        Me.OrangePb.Size = New System.Drawing.Size(70, 70)
+        Me.OrangePb.Size = New System.Drawing.Size(93, 86)
         Me.OrangePb.TabIndex = 2
         Me.OrangePb.TabStop = False
         '
@@ -350,9 +375,10 @@ Partial Class Form1
         '
         Me.YellowPb.BackColor = System.Drawing.Color.Khaki
         Me.YellowPb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.YellowPb.Location = New System.Drawing.Point(287, 104)
+        Me.YellowPb.Location = New System.Drawing.Point(383, 128)
+        Me.YellowPb.Margin = New System.Windows.Forms.Padding(4)
         Me.YellowPb.Name = "YellowPb"
-        Me.YellowPb.Size = New System.Drawing.Size(70, 70)
+        Me.YellowPb.Size = New System.Drawing.Size(93, 86)
         Me.YellowPb.TabIndex = 3
         Me.YellowPb.TabStop = False
         '
@@ -360,9 +386,10 @@ Partial Class Form1
         '
         Me.GreenPB.BackColor = System.Drawing.Color.PaleGreen
         Me.GreenPB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.GreenPB.Location = New System.Drawing.Point(410, 104)
+        Me.GreenPB.Location = New System.Drawing.Point(547, 128)
+        Me.GreenPB.Margin = New System.Windows.Forms.Padding(4)
         Me.GreenPB.Name = "GreenPB"
-        Me.GreenPB.Size = New System.Drawing.Size(70, 70)
+        Me.GreenPB.Size = New System.Drawing.Size(93, 86)
         Me.GreenPB.TabIndex = 4
         Me.GreenPB.TabStop = False
         '
@@ -370,9 +397,10 @@ Partial Class Form1
         '
         Me.BluePB.BackColor = System.Drawing.Color.PaleTurquoise
         Me.BluePB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.BluePB.Location = New System.Drawing.Point(539, 104)
+        Me.BluePB.Location = New System.Drawing.Point(719, 128)
+        Me.BluePB.Margin = New System.Windows.Forms.Padding(4)
         Me.BluePB.Name = "BluePB"
-        Me.BluePB.Size = New System.Drawing.Size(70, 70)
+        Me.BluePB.Size = New System.Drawing.Size(93, 86)
         Me.BluePB.TabIndex = 5
         Me.BluePB.TabStop = False
         '
@@ -380,9 +408,10 @@ Partial Class Form1
         '
         Me.PurplePB.BackColor = System.Drawing.Color.Plum
         Me.PurplePB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PurplePB.Location = New System.Drawing.Point(663, 104)
+        Me.PurplePB.Location = New System.Drawing.Point(884, 128)
+        Me.PurplePB.Margin = New System.Windows.Forms.Padding(4)
         Me.PurplePB.Name = "PurplePB"
-        Me.PurplePB.Size = New System.Drawing.Size(70, 70)
+        Me.PurplePB.Size = New System.Drawing.Size(93, 86)
         Me.PurplePB.TabIndex = 6
         Me.PurplePB.TabStop = False
         '
@@ -390,21 +419,24 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(35, 17)
+        Me.Label2.Location = New System.Drawing.Point(47, 21)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(135, 39)
+        Me.Label2.Size = New System.Drawing.Size(164, 48)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Colours"
         '
         'LeaderboardPanel
         '
         Me.LeaderboardPanel.BackColor = System.Drawing.Color.Plum
+        Me.LeaderboardPanel.Controls.Add(Me.LeaderboardBack)
         Me.LeaderboardPanel.Controls.Add(Me.Leaderboardlabel)
         Me.LeaderboardPanel.Controls.Add(Me.Label4)
         Me.LeaderboardPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.LeaderboardPanel.Location = New System.Drawing.Point(0, 0)
+        Me.LeaderboardPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.LeaderboardPanel.Name = "LeaderboardPanel"
-        Me.LeaderboardPanel.Size = New System.Drawing.Size(800, 450)
+        Me.LeaderboardPanel.Size = New System.Drawing.Size(1067, 554)
         Me.LeaderboardPanel.TabIndex = 9
         Me.LeaderboardPanel.Visible = False
         '
@@ -412,9 +444,10 @@ Partial Class Form1
         '
         Me.Leaderboardlabel.AutoSize = True
         Me.Leaderboardlabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 30.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Leaderboardlabel.Location = New System.Drawing.Point(279, 73)
+        Me.Leaderboardlabel.Location = New System.Drawing.Point(372, 90)
+        Me.Leaderboardlabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Leaderboardlabel.Name = "Leaderboardlabel"
-        Me.Leaderboardlabel.Size = New System.Drawing.Size(0, 46)
+        Me.Leaderboardlabel.Size = New System.Drawing.Size(0, 58)
         Me.Leaderboardlabel.TabIndex = 1
         '
         'Label4
@@ -423,22 +456,35 @@ Partial Class Form1
         Me.Label4.BackColor = System.Drawing.Color.Plum
         Me.Label4.Cursor = System.Windows.Forms.Cursors.No
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 45.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(3, 4)
+        Me.Label4.Location = New System.Drawing.Point(4, 5)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(384, 69)
+        Me.Label4.Size = New System.Drawing.Size(486, 85)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Leaderboard:"
         '
+        'LeaderboardBack
+        '
+        Me.LeaderboardBack.BackgroundImage = Global.Hangman.My.Resources.Resources.BackIcon
+        Me.LeaderboardBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.LeaderboardBack.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.LeaderboardBack.Location = New System.Drawing.Point(19, 484)
+        Me.LeaderboardBack.Name = "LeaderboardBack"
+        Me.LeaderboardBack.Size = New System.Drawing.Size(52, 54)
+        Me.LeaderboardBack.TabIndex = 2
+        Me.LeaderboardBack.TabStop = False
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1067, 554)
         Me.Controls.Add(Me.LeaderboardPanel)
         Me.Controls.Add(Me.StartPanel)
         Me.Controls.Add(Me.SubjectPanel)
         Me.Controls.Add(Me.GamePanel)
         Me.Controls.Add(Me.SettingsPanel)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Start"
         Me.StartPanel.ResumeLayout(False)
@@ -461,6 +507,7 @@ Partial Class Form1
         CType(Me.PurplePB, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LeaderboardPanel.ResumeLayout(False)
         Me.LeaderboardPanel.PerformLayout()
+        CType(Me.LeaderboardBack, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -496,4 +543,5 @@ Partial Class Form1
     Friend WithEvents LeaderboardPanel As Panel
     Friend WithEvents Leaderboardlabel As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents LeaderboardBack As PictureBox
 End Class

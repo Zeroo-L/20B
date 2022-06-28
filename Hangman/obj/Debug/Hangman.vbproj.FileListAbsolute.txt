@@ -44,9 +44,7 @@ C:\Users\legol\Downloads\20b\Hangman\bin\Debug\Hangman.pdb
 C:\Users\legol\Downloads\20b\Hangman\bin\Debug\Hangman.xml
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.vbprojAssemblyReference.cache
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.Form1.resources
-C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.Main.resources
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.Resources.resources
-C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.Start.resources
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.vbproj.GenerateResource.cache
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.vbproj.CoreCompileInputs.cache
 C:\Users\legol\Downloads\20b\Hangman\obj\Debug\Hangman.exe

@@ -300,6 +300,11 @@ Public Class Form1
         End If
     End Sub
 
+    Private Sub LeaderboardBack_Click(sender As Object, e As EventArgs) Handles LeaderboardBack.Click
+        LeaderboardPanel.Visible = False
+        StartPanel.Visible = True
+    End Sub
+
     Function LeaderboardShift(ByVal ScorePlace As Integer, ByVal PlayerScore As Integer)
         Dim i As Integer = 3
 
@@ -415,6 +420,5 @@ Public Class Form1
         Score = 0
         HangManPB.Image = Nothing
     End Sub
-
 
 End Class
